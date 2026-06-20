@@ -7,7 +7,14 @@
   --color-detalle: #C0B9DD;     /* Periwinkle */
   --fuente-principal: 'Nunito', sans-serif;
 }
+.dark-mode {
+  background-color: #1a1a1a;
+  color: white;
+}
 
+.oculto {
+  display: none;
+}
 
 * {
   box-sizing: border-box;
@@ -102,4 +109,24 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
+}
+.btn-flotante {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #222;
+  color: white;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  z-index: 1000; /* Asegura que quede por encima de todo */
+  transition: all 0.2s ease;
+}
+
+.btn-flotante:hover {
+  transform: scale(1.05); /* Hace un pequeño zoom al pasar el mouse */
+  background-color: #444;
 }

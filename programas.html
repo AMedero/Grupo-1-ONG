@@ -4,23 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programas - Código para todos ONG</title>
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <header>
     <img src="images/codigo-para-todos.jpg" alt="Logo" width="230" height="100">
-  <h1>Código para todos</h1>
+    <h1>Código para todos</h1>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="programas.html">Programas</a></li>
-      <li><a href="contacto.html">Contactos</a></li>
-    </ul>
-    <link rel="stylesheet" href="css/estilos.css">
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="contacto.html">Contactos</a></li>
+      </ul>
+    </nav>
+    
+    <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
   </header>
-
 
   <hr>
 
@@ -31,7 +32,6 @@
 
   <h3>Iniciativas en marcha</h3>
 
-  <!-- PROGRAMA 1 -->
   <article>
     <h4>Conocé tu computadora</h4>
     <p>
@@ -40,20 +40,23 @@
       parlantes. Se practica cómo encender y apagar correctamente la
       computadora, mover el mouse, hacer clic y escribir las primeras palabras.
     </p>
-    <p><strong>¿A quién está dirigido?</strong><br>
-      Personas de cualquier edad que nunca usaron una computadora o que tienen
-      miedo de romper algo al tocarla.
-    </p>
-    <p><strong>¿Cómo participar?</strong><br>
-      Acercándose a cualquiera de nuestros centros comunitarios de lunes a
-      viernes de 10 a 17hs. No se requiere inscripción previa ni conocimientos
-      previos.
-    </p>
+    
+    <div class="oculto">
+      <p><strong>¿A quién está dirigido?</strong><br>
+        Personas de cualquier edad que nunca usaron una computadora o que tienen
+        miedo de romper algo al tocarla.
+      </p>
+      <p><strong>¿Cómo participar?</strong><br>
+        Acercándose a cualquiera de nuestros centros comunitarios de lunes a
+        viernes de 10 a 17hs. No se requiere inscripción previa ni conocimientos
+        previos.
+      </p>
+    </div>
+    <button class="btn-ver-mas">Ver más</button>
   </article>
 
   <hr>
 
-  <!-- PROGRAMA 2 -->
   <article>
     <h4>Mis primeras palabras digitales</h4>
     <p>
@@ -62,20 +65,23 @@
       Borrar y las mayúsculas. Se practican ejercicios simples de escritura
       en un procesador de texto para ganar confianza y velocidad de a poco.
     </p>
-    <p><strong>¿A quién está dirigido?</strong><br>
-      Adultos mayores, personas con poca escolaridad o cualquiera que nunca
-      haya escrito en un teclado.
-    </p>
-    <p><strong>¿Cómo participar?</strong><br>
-      Inscribiéndose de forma gratuita en nuestro formulario de contacto o
-      llamando al centro comunitario más cercano. Los grupos son pequeños para
-      que nadie quede atrás.
-    </p>
+    
+    <div class="oculto">
+      <p><strong>¿A quién está dirigido?</strong><br>
+        Adultos mayores, personas con poca escolaridad o cualquiera que nunca
+        haya escrito en un teclado.
+      </p>
+      <p><strong>¿Cómo participar?</strong><br>
+        Inscribiéndose de forma gratuita en nuestro formulario de contacto o
+        llamando al centro comunitario más cercano. Los grupos son pequeños para
+        que nadie quede atrás.
+      </p>
+    </div>
+    <button class="btn-ver-mas">Ver más</button>
   </article>
 
   <hr>
 
-  <!-- PROGRAMA 3 -->
   <article>
     <h4>Internet paso a paso</h4>
     <p>
@@ -85,15 +91,19 @@
       correo electrónico por primera vez. Todo a ritmo tranquilo y con
       ayuda permanente.
     </p>
-    <p><strong>¿A quién está dirigido?</strong><br>
-      Personas que ya completaron el taller "Conocé tu computadora" o que
-      saben usar el mouse y el teclado pero nunca navegaron por internet.
-    </p>
-    <p><strong>¿Cómo participar?</strong><br>
-      Es el paso siguiente a los talleres anteriores. Podés anotarte en
-      nuestros centros o escribirnos a info@codigoparatodos.org.ar para
-      conocer los horarios disponibles.
-    </p>
+    
+    <div class="oculto">
+      <p><strong>¿A quién está dirigido?</strong><br>
+        Personas que ya completaron el taller "Conocé tu computadora" o que
+        saben usar el mouse y el teclado pero nunca navegaron por internet.
+      </p>
+      <p><strong>¿Cómo participar?</strong><br>
+        Es el paso siguiente a los talleres anteriores. Podés anotarte en
+        nuestros centros o escribirnos a info@codigoparatodos.org.ar para
+        conocer los horarios disponibles.
+      </p>
+    </div>
+    <button class="btn-ver-mas">Ver más</button>
   </article>
 
   <hr>
@@ -102,5 +112,6 @@
     <p>&copy; 2024 Código para todos ONG. Todos los derechos reservados.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
