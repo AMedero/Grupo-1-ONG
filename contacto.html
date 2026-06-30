@@ -20,33 +20,46 @@
             </ul>
         </nav>
         <link rel="stylesheet" href="css/estilos.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     </header>
-    <main> 
+    <main class="container mt-4"> 
         <h2>Sumate como voluntario</h2>
         <p>Completa el formulario o escribinos a <a href="">CodigoParaTodos@ong.com.ar</a></p>
-     <form action="/enviar" method="post">
-        <label for="nombre"> Nombre y Apellido</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej: Lucia Barrientos" required>
-        <br>
-        <label for="email">Correo Electronico</label>
-        <input type="email" name="email" id="email" placeholder="tucorreo@gmail.com" required>
-        <br>
-        <label for="telefono">Telefono</label>
-        <input type="tel" name="telefono" id="telefono" placeholder="+5469857235" required>
-        <br>
-        <label for="programa">Motivo de contacto</label>
-        <select name="programa" id="programa" required>
-            <option value="elegir programa"> Elegir motivo</option>
-            <option value="Trabajar con nosotros"> Trabajar con nosotros</option>
+     <form action="/enviar" method="post" class="container mt-4">
+            <div class="mb-3">
+            <label for="nombre" class="form-label"> Nombre y Apellido</label>
+            <input type="text" id="nombre" name="nombre" class= "form-control" placeholder="Ej: Lucia Barrientos" required>
+            </div>
+             <br> 
+             <div class="mb-3"> 
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" id="email" name="email"
+            class="form-control"
+            placeholder="tucorreo@gmail.com" required>
+             </div>
+             <br>
+            <div class="mb-3">
+            <label for="telefono" class="form-label">Telefono</label> 
+            <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="+5469857235" required>
+            </div>
+            <br>
+            <div class="mb-3">
+            <label for="programa" class="form-label">Motivo de contacto</label> 
+            <select name="programa" id="programa" class="form-select" required>
+             <option value="elegir programa"> Elegir motivo</option>
+            <option value="Trabajar con nosotros"> Trabajar con nosotros</option> 
             <option value="Donaciones">Donaciones</option>
             <option value="Solicitar servicio">Solicitar Servicio</option>
-            <option value="Otros">Otros</option>
-        </select>
-        <label for="mensaje">Contanos con mas detalles</label>
-        <textarea name="mensaje" id="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aqui.." required></textarea>
-        <br>
-        <button type="submit">enviar</button>
-    </form>
+            <option value="Otros">Otros</option> 
+            </select>
+            </div>
+            <div class="mb-3">
+            <label for="mensaje" class="form-label">Contanos con mas detalles</label> 
+            <textarea name="mensaje" id="mensaje" class="form-control" rows="4" cols="50"  placeholder="Escribe tu mensaje aqui.." required></textarea> 
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">enviar</button>
+        </form> 
     </main>
     <footer>
         <p> <small> Codigo para todos &copy; 2026 </small></p>
