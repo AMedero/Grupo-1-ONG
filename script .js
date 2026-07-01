@@ -4,7 +4,6 @@ const btnModoOscuro = document.getElementById("btn-modo-oscuro");
 btnModoOscuro.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
-  // Cambia el texto del botón según el estado
   if (document.body.classList.contains("dark-mode")) {
     btnModoOscuro.textContent = "☀️ Modo claro";
   } else {
