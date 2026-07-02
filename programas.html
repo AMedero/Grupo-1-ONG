@@ -6,12 +6,14 @@
   <title>Programas - Código para Todos ONG</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
   <header>
+    <button id="btn-modo-oscuro" aria-label="Modo oscuro" class="toggle-modo-oscuro">🌙</button>
+
     <img src="images/codigo-para-todos.jpg" alt="Logo" width="230" height="100">
     <h1>Código para Todos</h1>
     <p>Bienvenidos a Código para todos ONG.</p>
-
 
     <nav>
       <ul>
@@ -21,8 +23,6 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    
-    <button id="btn-modo-oscuro">🌙 Modo oscuro</button>
   </header>
 
   <hr>
@@ -34,79 +34,82 @@
 
   <h3>Iniciativas en marcha</h3>
 
-  <article>
-    <h4>Conocé tu computadora</h4>
-    <p>
-      Un taller introductorio donde los participantes aprenden a identificar
-      y usar los periféricos básicos: el teclado, el mouse, el monitor y los
-      parlantes. Se practica cómo encender y apagar correctamente la
-      computadora, mover el mouse, hacer clic y escribir las primeras palabras.
-    </p>
-    
-    <div class="oculto">
-      <p><strong>¿A quién está dirigido?</strong><br>
-        Personas de cualquier edad que nunca usaron una computadora o que tienen
-        miedo de romper algo al tocarla.
-      </p>
-      <p><strong>¿Cómo participar?</strong><br>
-        Acercándose a cualquiera de nuestros centros comunitarios de lunes a
-        viernes de 10 a 17hs. No se requiere inscripción previa ni conocimientos
-        previos.
-      </p>
-    </div>
-    <button class="btn-ver-mas">Ver más</button>
-  </article>
+  <div class="cursos-flex">
 
-  <hr>
+    <article>
+      <h4>Conocé tu computadora</h4>
+      <p>
+        Un taller introductorio donde los participantes aprenden a identificar
+        y usar los periféricos básicos: el teclado, el mouse, el monitor y los
+        parlantes. Se practica cómo encender y apagar correctamente la
+        computadora, mover el mouse, hacer clic y escribir las primeras palabras.
+      </p>
 
-  <article>
-    <h4>Mis primeras palabras digitales</h4>
-    <p>
-      En este taller los participantes aprenden a usar el teclado desde cero:
-      cómo ubicar las letras, los números y las teclas especiales como Enter,
-      Borrar y las mayúsculas. Se practican ejercicios simples de escritura
-      en un procesador de texto para ganar confianza y velocidad de a poco.
-    </p>
-    
-    <div class="oculto">
-      <p><strong>¿A quién está dirigido?</strong><br>
-        Adultos mayores, personas con poca escolaridad o cualquiera que nunca
-        haya escrito en un teclado.
-      </p>
-      <p><strong>¿Cómo participar?</strong><br>
-        Inscribiéndose de forma gratuita en nuestro formulario de contacto o
-        llamando al centro comunitario más cercano. Los grupos son pequeños para
-        que nadie quede atrás.
-      </p>
-    </div>
-    <button class="btn-ver-mas">Ver más</button>
-  </article>
+      <div class="oculto">
+        <p><strong>Duración:</strong> 4 clases de 1 hora</p>
+        <p><strong>Dirigido a:</strong> adultos mayores y personas sin experiencia previa con computadoras</p>
+        <p><strong>¿Qué vas a aprender?</strong></p>
+        <ul>
+          <li>Identificar y usar el teclado, el mouse, el monitor y los parlantes</li>
+          <li>Encender y apagar la computadora correctamente</li>
+          <li>Mover el mouse, hacer clic simple y doble clic</li>
+          <li>Escribir tus primeras palabras en pantalla</li>
+        </ul>
+        <p><strong>Requisitos:</strong> Ninguno. Pensado para quienes nunca usaron una computadora.</p>
+      </div>
+      <button class="btn-ver-mas">Ver más</button>
+    </article>
 
-  <hr>
+    <article>
+      <h4>Mis primeras palabras digitales</h4>
+      <p>
+        En este taller los participantes aprenden a usar el teclado desde cero:
+        cómo ubicar las letras, los números y las teclas especiales como Enter,
+        Borrar y las mayúsculas. Se practican ejercicios simples de escritura
+        en un procesador de texto para ganar confianza y velocidad de a poco.
+      </p>
 
-  <article>
-    <h4>Internet paso a paso</h4>
-    <p>
-      Una vez que los participantes conocen la computadora, este programa
-      les enseña qué es internet y cómo usarlo de forma segura. Aprenden a
-      abrir un navegador, buscar información, leer noticias y enviar un
-      correo electrónico por primera vez. Todo a ritmo tranquilo y con
-      ayuda permanente.
-    </p>
-    
-    <div class="oculto">
-      <p><strong>¿A quién está dirigido?</strong><br>
-        Personas que ya completaron el taller "Conocé tu computadora" o que
-        saben usar el mouse y el teclado pero nunca navegaron por internet.
+      <div class="oculto">
+        <p><strong>Duración:</strong> 5 clases de 1 hora</p>
+        <p><strong>Dirigido a:</strong> personas que ya conocen lo básico de la computadora</p>
+        <p><strong>¿Qué vas a aprender?</strong></p>
+        <ul>
+          <li>Ubicar letras, números y teclas especiales (Enter, Borrar, Mayúsculas)</li>
+          <li>Escribir textos simples en un procesador de texto</li>
+          <li>Corregir errores y borrar con confianza</li>
+          <li>Ganar velocidad de escritura de a poco</li>
+        </ul>
+        <p><strong>Requisitos:</strong> Haber completado "Conocé tu computadora" o tener manejo básico del mouse.</p>
+      </div>
+      <button class="btn-ver-mas">Ver más</button>
+    </article>
+
+    <article>
+      <h4>Internet paso a paso</h4>
+      <p>
+        Una vez que los participantes conocen la computadora, este programa
+        les enseña qué es internet y cómo usarlo de forma segura. Aprenden a
+        abrir un navegador, buscar información, leer noticias y enviar un
+        correo electrónico por primera vez. Todo a ritmo tranquilo y con
+        ayuda permanente.
       </p>
-      <p><strong>¿Cómo participar?</strong><br>
-        Es el paso siguiente a los talleres anteriores. Podés anotarte en
-        nuestros centros o escribirnos a info@codigoparatodos.org.ar para
-        conocer los horarios disponibles.
-      </p>
-    </div>
-    <button class="btn-ver-mas">Ver más</button>
-  </article>
+
+      <div class="oculto">
+        <p><strong>Duración:</strong> 6 clases de 1 hora</p>
+        <p><strong>Dirigido a:</strong> personas que ya manejan el teclado</p>
+        <p><strong>¿Qué vas a aprender?</strong></p>
+        <ul>
+          <li>Qué es internet y cómo usarlo de forma segura</li>
+          <li>Abrir un navegador y moverse entre páginas</li>
+          <li>Buscar información y reconocer fuentes confiables</li>
+          <li>Crear y enviar un correo electrónico por primera vez</li>
+        </ul>
+        <p><strong>Requisitos:</strong> Haber completado "Mis primeras palabras digitales" o manejo básico del teclado.</p>
+      </div>
+      <button class="btn-ver-mas">Ver más</button>
+    </article>
+
+  </div>
 
   <hr>
 
@@ -114,6 +117,15 @@
     <p>&copy; 2024 Código para todos ONG. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Modal -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-contenido">
+      <button id="cerrarModal" class="modal-cerrar">&times;</button>
+      <h4 id="modalTitulo" class="modal-titulo"></h4>
+      <div id="modalContenido" class="modal-cuerpo"></div>
+    </div>
+  </div>
+
+  <script src="script .js"></script>
 </body>
 </html>

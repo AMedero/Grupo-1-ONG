@@ -4,26 +4,44 @@ const btnModoOscuro = document.getElementById("btn-modo-oscuro");
 btnModoOscuro.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
-  // Cambia el texto del botón según el estado
   if (document.body.classList.contains("dark-mode")) {
-    btnModoOscuro.textContent = "☀️ Modo claro";
+    btnModoOscuro.textContent = "☀️";
   } else {
-    btnModoOscuro.textContent = "🌙 Modo oscuro";
+    btnModoOscuro.textContent = "🌙";
   }
 });
-console.log("Prueba");
-// --- Ver más / Ver menos en cada programa ---
+
+// --- Ver más: abre modal con info del programa ---
 const botonesVerMas = document.querySelectorAll(".btn-ver-mas");
+const modalOverlay = document.getElementById("modalOverlay");
+const modalTitulo = document.getElementById("modalTitulo");
+const modalContenido = document.getElementById("modalContenido");
+const cerrarModalBtn = document.getElementById("cerrarModal");
 
 botonesVerMas.forEach((boton) => {
   boton.addEventListener("click", () => {
-    const contenido = boton.previousElementSibling; // el div justo antes del botón
-    contenido.classList.toggle("oculto");
+    const articulo = boton.closest("article");
+    const titulo = articulo.querySelector("h4").textContent;
+    const contenidoOculto = articulo.querySelector(".oculto").innerHTML;
 
-    if (contenido.classList.contains("oculto")) {
-      boton.textContent = "Ver más";
-    } else {
-      boton.textContent = "Ver menos";
-    }
+    modalTitulo.textContent = titulo;
+    modalContenido.innerHTML = contenidoOculto;
+    modalOverlay.classList.add("activo");
+    document.body.classList.add("bloqueo-scroll");
   });
+});
+
+function cerrarModal() {
+  modalOverlay.classList.remove("activo");
+  document.body.classList.remove("bloqueo-scroll");
+}
+
+cerrarModalBtn.addEventListener("click", cerrarModal);
+
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) cerrarModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") cerrarModal();
 });
