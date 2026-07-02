@@ -81,6 +81,34 @@ nav a {
 nav a:hover {
   color: var(--color-acento);
 }
+.banner {
+  width: 100%;
+  height: auto;
+}
+/* --- Sección de cursos: imágenes alineadas --- */
+.cursos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* separación entre imágenes */
+    flex-wrap: wrap; /* por si la pantalla es chica */
+    margin-top: 20px;
+}
+
+/* Tamaño aproximado 6x6 cm (≈ 226px) */
+.cursos img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* recorta sin deformar */
+    border-radius: 10px; /* opcional, queda lindo */
+}
+
+/* Centrar los títulos debajo de cada imagen */
+.cursos h3 {
+    text-align: center;
+    width: 226px; /* coincide con el tamaño de la imagen */
+    margin-top: 10px;
+}
 
 
 section {
