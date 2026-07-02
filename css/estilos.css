@@ -104,6 +104,7 @@ footer {
   font-size: 0.9rem;
 }
 
+<<<<<<< HEAD
 header {
   position: sticky;
   top: 0;
@@ -125,6 +126,99 @@ header {
   color: white;
 }
 
+=======
+/* -----------MODAL (ventana emergente de "Ver más")-------------*/
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.activo {
+  display: flex;
+}
+
+.modal-contenido {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-titulo {
+  color: var(--color-primario);
+  margin-bottom: 15px;
+  padding-right: 25px;
+}
+
+.modal-cuerpo p {
+  margin-bottom: 12px;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+  line-height: 1;
+}
+
+.modal-cerrar:hover {
+  color: var(--color-primario);
+}
+
+.bloqueo-scroll {
+  overflow: hidden;
+}
+
+/* -----------FLEXBOX: tarjetas de talleres-------------*/
+.cursos-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.cursos-flex article {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cursos-flex article .btn-ver-mas {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* -----------IMAGEN DE CADA TARJETA DE TALLER-------------*/
+.curso-imagen {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+/* -----------BOTÓN MODO OSCURO REUBICADO-------------*/
+>>>>>>> c302e75dbf55e163d84e2f26b1ecac8a4ba7d525
 header {
   position: relative;
 }
