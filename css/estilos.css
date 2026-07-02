@@ -110,3 +110,20 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
 }
+
+header {
+  position: sticky;
+  top: 0;
+}
+.btn-primary {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+.form-control {
+  border: 2px solid var(--color-detalle);
+}
+
+.form-select {
+  border: 2px solid var(--color-detalle);
+}
