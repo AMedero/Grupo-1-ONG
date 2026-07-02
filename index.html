@@ -4,76 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Código para todos.ong</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
       <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 <body>
+    
     <header>
-<<<<<<< HEAD
-        <img src="images/codigo-para-todos.jpg" #1 alt="Logo" width="230" height="100">
-=======
-          <button id="btn-modo-oscuro" aria-label="Modo oscuro" class="toggle-modo-oscuro">🌙</button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+      <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                    <img src="images/codigo-para-todos.jpg" alt="Logo" width="120" height="60" class="me-2">
+                </a>
+      <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <img src="images/codigo-para-todos.jpg" alt="Logo" width="230" height="100">
->>>>>>> 7b5697ee8b50cefa2d2bc64b2cd2f6a61fa24bcd
-        <h1>Código para Todos</h1>
-        <p>Bienvenidos a Código para todos ONG.</p>
-
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./programas.html">Programas</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+      <!-- Contenido del menú -->
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./programas.html">Programas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+        <!-- Botón modo oscuro dentro del navbar -->
+                <button id="btn-modo-oscuro" aria-label="Modo oscuro" class="toggle-modo-oscuro ms-3">🌙</button>
+             </div>
+             </div>
         </nav>
-    </header>   
+    </header>
+ 
     <main>
          <section class="Portada">
-            <img class="banner" src="images/cursos en las escuelas.jpg" alt="Cursos en las escuelas" class="imagen1" width="250px" height="300px">
+            <img class="banner" src="images/Portada-ndx.jpg" alt="Cursos en las escuelas" class="imagen1" width="250px" height="300px">
         </section> 
             <section class="sobre-nosotros">
-            <h2>Sobre nosotros</h2>
-            <p>Código para todos es una organización sin fines de lucro dedicada a promover la educación tecnológica y la inclusión digital. Nuestra misión es brindar acceso a recursos educativos de calidad en programación, desarrollo web, inteligencia artificial y otras áreas tecnológicas, especialmente para comunidades desfavorecidas. A través de nuestros cursos gratuitos, talleres y programas de mentoría, buscamos empoderar a individuos de todas las edades para que puedan desarrollar habilidades digitales y mejorar sus oportunidades laborales en el mundo moderno.</p>
+                <h2>Sobre nosotros</h2>
+                <p id="texto-corto">
+                    Código para Todos es una organización sin fines de lucro comprometida con la inclusión digital y el acceso equitativo a las tecnologías que hoy forman parte de la vida cotidiana. Nuestro propósito es acompañar a personas de todas las edades en sus primeros pasos dentro del mundo digital, brindando herramientas prácticas que les permitan desenvolverse con autonomía, seguridad y confianza en entornos tecnológicos cada vez más presentes en el estudio, el trabajo y la comunicación.
+                </p>
+                <p id="texto-completo" class="oculto">
+                    Creemos que la alfabetización digital es un derecho fundamental. Por eso desarrollamos programas formativos pensados especialmente para quienes nunca tuvieron la oportunidad de aprender a usar una computadora, navegar por Internet o realizar trámites digitales. En nuestro curso Conocé tu computadora, guiamos a los participantes en el reconocimiento de las partes del equipo, el manejo básico del sistema, la organización de archivos y las funciones esenciales que permiten comenzar a interactuar con la tecnología desde cero.
+                    <br>
+                    <br>
+                    A través de Mis primeras palabras digitales, acompañamos a quienes desean fortalecer sus habilidades digitales iniciales. Este curso ofrece una introducción accesible al uso de herramientas digitales básicas, la comprensión de conceptos fundamentales y la adquisición de hábitos tecnológicos que facilitan el aprendizaje continuo. Nuestro enfoque es práctico, claro y pensado para quienes necesitan un acompañamiento cercano en sus primeros pasos.
+                    <br>
+                    <br>
+                    En Internet paso a paso, brindamos conocimientos esenciales para aprovechar la red como una herramienta de productividad y empleabilidad. Enseñamos a utilizar servicios online, gestionar correos electrónicos, realizar trámites digitales, acceder a plataformas de estudio y trabajo, y adoptar buenas prácticas de seguridad digital. Este curso busca que cada persona pueda desenvolverse con mayor independencia en el entorno digital y aprovecharlo para mejorar su calidad de vida y sus oportunidades laborales.
+                    <br>
+                    <br>
+                    En Código para Todos trabajamos para que la tecnología sea una puerta abierta y no una barrera. Promovemos espacios de aprendizaje inclusivos, gratuitos y accesibles, donde cada persona pueda avanzar a su ritmo, acompañada por docentes y voluntarios comprometidos con la educación digital. Nuestro objetivo es construir un futuro donde todas las personas tengan las herramientas necesarias para participar plenamente en la sociedad digital.
+                </p>
+
+            <button id="btn-ver-mas" class="btn-ver-mas">Ver más</button>
+            <button id="btn-mostrar-menos" class="btn-mostrar-menos oculto">Mostrar menos</button>
         </section>
+
         <section class="Cursos-disponibles">
             <h2>Inscripciones 2026-2do cuatrimestre</h2>
             <div class="cursos">
-                <div class="curso1"><img src="images/AlfabetizaciónDigitalBásica.png" alt="Inscripción 1"></div>
+                <div class="curso"><img src="images/AlfabetizaciónDigitalBásica.png" alt="Inscripción 1"></div>
                 <h3><a href="inteligenciaArtificial.html">Conocé tu computadora</a></h3>
-                <div class="curso2"><img src="images/introduccionAPython.png" alt="Inscripción 2"></div>
-                <h3><a href="introduccionAPython.html">Mis primeras palabras digitales</a></h3>
-                <div class="curso3"><img src="images/productividadYEmpleabilidadDigital.png" alt="Inscripción 3"></div>
-                <h3><a href="productividadYEmpleabilidadDigital.html">Internet paso a paso</a></h3>
+                <div class="curso"><img src="images/primeras palabras digitales.png" alt="Inscripción 2"></div>
+                <h3><a href="introduccionAPython.html" target="_blank">Mis primeras palabras digitales</a></h3>
+                <div class="curso"><img src="images/int-pasoapaso.png" alt="Inscripción 3"></div>
+                <h3><a href="productividadYEmpleabilidadDigital.html" target="_blank">Internet paso a paso</a></h3>
             </div>
         </section>
 
         <section class="direcciones">
             <h2>Nos encontramos en:</h2>
-<<<<<<< HEAD
-            <p>Oficina Central: Calle Principal 123, Buenos Aires, Argentina</p>
-            <p>Sucursal Norte: Avenida Secundaria 456, Salta, Argentina</p>
-            <p>Sucursal Sur: Calle Tercera 789, Rio Negro, Argentina</p>
-=======
-            <p>Oficina Central: Calle Principal 123, Ciudad BUENOS AIRES, País ARGENTINA</p>
-            <p>Sucursal Norte: Avenida Secundaria 456, Ciudad BUENOS AIRES, País ARGENTINA</p>
-            <p>Sucursal Sur: Calle Tercera 789, Ciudad BUENOS AIRES, País ARGENTINA</p>
->>>>>>> 7b5697ee8b50cefa2d2bc64b2cd2f6a61fa24bcd
+            <p><a href="https://maps.google.com" target="_blank">>Oficina Central: Calle Principal 123, Buenos Aires, Argentina</a></p>
+            <p><a href="https://maps.google.com" target="_blank">>Sucursal Norte: Avenida Secundaria 456, Salta, Argentina</a></p>
+            <p><a href="https://maps.google.com" target="_blank">>Sucursal Sur: Calle Tercera 789, Rio Negro, Argentina</a></p>
         </section>
+
         <section class="redes-sociales">
             <h2>Redes sociales</h2>
             <p>Síguenos en nuestras redes sociales para estar al tanto de nuestras actividades, cursos y eventos:</p>
-            <ul>
-                <li><a href="https://www.facebook.com/codigoparatodos">Facebook</a></li>
-                <li><a href="https://www.twitter.com/codigoparatodos">Twitter</a></li>
-                <li><a href="https://www.instagram.com/codigoparatodos">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/company/codigoparatodos">LinkedIn</a></li>
-            </ul>
-        </section> 
+            <div class="iconos-redes">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/new-x-twitter-logo.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </section>
     </main>
     <footer>
         <h6>© 2024 Código para todos ONG. Todos los derechos reservados.</h6>
     </footer>
-    <script src="script .js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
