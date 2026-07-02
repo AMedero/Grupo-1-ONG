@@ -5,9 +5,9 @@ btnModoOscuro.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
   if (document.body.classList.contains("dark-mode")) {
-    btnModoOscuro.textContent = "☀️ Modo claro";
+    btnModoOscuro.textContent = "☀️";
   } else {
-    btnModoOscuro.textContent = "🌙 Modo oscuro";
+    btnModoOscuro.textContent = "🌙";
   }
 });
 
