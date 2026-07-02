@@ -104,6 +104,27 @@ footer {
   font-size: 0.9rem;
 }
 
+header {
+  position: sticky;
+  top: 0;
+}
+.btn-primary {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+.form-control {
+  border: 2px solid var(--color-detalle);
+}
+
+.form-select {
+  border: 2px solid var(--color-detalle);
+}
+.dark-mode {
+  background-color: #1a1a1a;
+  color: white;
+}
+
 /* -----------MODAL (ventana emergente de "Ver más")-------------*/
 .modal-overlay {
   display: none;
