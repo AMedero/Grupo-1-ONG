@@ -4,43 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Código para Todos</title>
+    <script>
+        (function () {
+            if (localStorage.getItem('tema') === 'oscuro') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
 
 </head>
 <body>
     <header>
-                    <button id="btn-modo-oscuro" aria-label="Modo oscuro" class="toggle-modo-oscuro">🌙</button>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="../images/codigo-para-todos.jpg" alt="Logo" width="120" height="60" class="me-2">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button id="btn-modo-oscuro" aria-label="Modo oscuro" class="toggle-modo-oscuro ms-2">🌙</button>
 
-                <img src="../images/codigo-para-todos.jpg" alt="Logo" width="230" height="100">
-        <h1>Código para Todos</h1>
-        <p>Bienvenidos a Código para todos ONG.</p>
-        <nav>
-            <ul>
-                                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./programas.html">Programas</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+                <div class="collapse navbar-collapse" id="navbarContenido">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./programas.html">Programas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="nosotros-bloque historia-bloque">
             <h2>Nuestra Historia</h2>
+            <img class="nosotros-imagen historia-imagen" src="../images/nuestraHistoria.webp" alt="Nuestra historia">
             <p>Código para Todos nació en 2024 por iniciativa de estudiantes de la UNAHUR, al detectar la profunda brecha digital en zonas rurales y sectores vulnerables de nuestro país.
 ​Comenzamos recuperando equipos informáticos en desuso para donarlos, pero pronto entendimos que la verdadera transformación requería también capacitación. Hoy, nuestra fundación gestiona laboratorios tecnológicos y brinda cursos de alfabetización digital y programación, acompañando a nuestros alumnos desde el primer contacto con una PC hasta su posible inserción laboral</p>
         </section>
 
-        <section>
+        <section class="nosotros-bloque valores-bloque">
             <h2>Valores</h2>
-            <ul>
-                <li>Compromiso social</li>
-                <li>Innovación educativa</li>
-                <li>Inclusión digital</li>
+            <ul class="valores-lista">
+                <li>
+                    <span>Compromiso social</span>
+                    <img class="nosotros-imagen valor-imagen" src="../images/compromiso-social.jpg" alt="Compromiso social">
+                </li>
+                <li>
+                    <span>Innovación educativa</span>
+                    <img class="nosotros-imagen valor-imagen" src="../images/innovacionEducativa.webp" alt="Innovación educativa">
+                </li>
+                <li>
+                    <span>Inclusión digital</span>
+                    <img class="nosotros-imagen valor-imagen" src="../images/inclusionDigital.webp" alt="Inclusión digital">
+                </li>
             </ul>
         </section>
 
-        <section>
+        <section class="nosotros-bloque equipo-bloque">
             <h2>Nuestro Equipo</h2>
             <p>Contamos con profesionales apasionados:</p>
             <ul>
@@ -49,6 +74,7 @@
                 <li>MEDERO, Adriel Cristian</li>
                 <li>VEDOVATO, Damian Alessandro</li>
             </ul>
+            <img class="nosotros-imagen equipo-imagen" src="../images/nuestroEquipoONG.jpg" alt="Nuestro equipo">
         </section>
 
         <section>
@@ -56,14 +82,37 @@
             <dl>
                 <dt>Ubicación</dt>
                 <dd>Zona Oeste, Buenos Aires</dd>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6566.934921557303!2d-58.64280285940631!3d-34.61762546234527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8d055e548bf%3A0x738f85ea67aeabe5!2sUniversidad%20Nacional%20de%20Hurlingham!5e0!3m2!1ses-419!2sar!4v1783012410750!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6566.934921557303!2d-58.64280285940631!3d-34.61762546234527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8d055e548bf%3A0x738f85ea67aeabe5!2sUniversidad%20Nacional%20de%20Hurlingham!5e0!3m2!1ses-419!2sar!4v1783012410750!5m2!1ses-419!2sar" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </dl>
+        </section>
+
+        <section class="redes-sociales">
+            <h2>Redes sociales</h2>
+            <p>Síguenos en nuestras redes sociales para estar al tanto de nuestras actividades, cursos y eventos:</p>
+            <div class="iconos-redes">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../images/iconos%20de%20redes/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../images/iconos%20de%20redes/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../images/iconos%20de%20redes/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../images/iconos%20de%20redes/whatsapp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../images/iconos%20de%20redes/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
         </section>
     </main>
 <hr>
     <footer>
         <p>Código para Todos &copy; 2026 - UNAHUR</p>
     </footer>
-<script src="../js/script .js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script .js"></script>
 </body>
 </html>

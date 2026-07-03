@@ -12,6 +12,32 @@
   color: white;
 }
 
+html.dark-mode body {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+html.dark-mode header,
+html.dark-mode footer,
+html.dark-mode section,
+html.dark-mode article,
+html.dark-mode .modal-contenido {
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+body,
+header,
+section,
+article,
+footer,
+.modal-contenido,
+nav a,
+.toggle-modo-oscuro,
+.navbar-toggler,
+.iconos-redes img {
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease, filter 0.22s ease;
+}
+
 .oculto {
   display: none;
 }
@@ -29,8 +55,8 @@ body {
   line-height: 1.7;
   color: #333333;
   background-color: var(--color-fondo);
-  max-width: 960px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
 }
 
 
@@ -67,6 +93,11 @@ header {
   padding: 20px 30px;
 }
 
+main {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 1.5rem auto 0;
+}
+
 
 nav ul {
   list-style: none;
@@ -84,13 +115,115 @@ nav a {
 nav a:hover {
   color: var(--color-acento);
 }
+
+.navbar .nav-link {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.navbar .nav-link--active {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.navbar .nav-link--active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.2rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.18);
+}
+
+html.dark-mode .navbar .nav-link--active::after {
+  background: var(--color-acento);
+  box-shadow: 0 0 0 4px rgba(117, 201, 200, 0.18);
+}
+
+html.dark-mode .navbar .nav-link--active {
+  color: #ffffff;
+}
 .navbar {
     background-color: #80A1D4 !important;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+#btn-modo-oscuro {
+  margin-left: auto;
 }
 
 .banner {
   width: 100%;
   height: auto;
+}
+
+iframe {
+  width: 100%;
+  max-width: 100%;
+  height: clamp(260px, 50vw, 450px);
+  border: 0;
+}
+
+.nosotros-bloque {
+  display: grid;
+  gap: 1rem;
+}
+
+.nosotros-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+.historia-imagen {
+  max-height: 360px;
+}
+
+.valores-lista {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.valores-lista li {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem;
+  border: 1px solid rgba(128, 161, 212, 0.22);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.valor-imagen {
+  max-height: 220px;
+}
+
+.equipo-imagen {
+  max-height: 360px;
+}
+
+html.dark-mode .valores-lista li {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+html.dark-mode .nosotros-imagen {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 /* --- Sección de cursos: alineacion de imagenes--- */
 .cursos {
@@ -123,14 +256,16 @@ nav a:hover {
 .iconos-redes {
   display: flex;          
   justify-content: center; 
-  gap: 15px;              
-  margin-top: 10px;
+  gap: 18px;               
+  margin-top: 16px;
+  flex-wrap: wrap;
 }
 
 .iconos-redes img {
   width: 40px;           
   height: 40px;
-  object-fit: contain;    
+  object-fit: contain;   
+  display: block;
 }
 
 section {
@@ -225,4 +360,78 @@ footer {
 
 .bloqueo-scroll {
   overflow: hidden;
+}
+
+.navbar {
+  background-color: var(--color-primario) !important;
+}
+
+.redes-sociales {
+  text-align: center;
+}
+
+.redes-sociales a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes-sociales img:hover {
+  transform: translateY(-2px) scale(1.06);
+}
+
+html.dark-mode .navbar {
+  background-color: #5f7fb6 !important;
+}
+
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode p,
+html.dark-mode li,
+html.dark-mode dd,
+html.dark-mode dt {
+  color: inherit;
+}
+
+html.dark-mode .iconos-redes img {
+  filter: brightness(0.92) saturate(0.95);
+}
+
+@media (max-width: 768px) {
+  main {
+    width: calc(100% - 1rem);
+    margin-top: 1rem;
+  }
+
+  section {
+    padding: 18px;
+  }
+
+  .cursos {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cursos img {
+    max-width: 100%;
+  }
+
+  .iconos-redes {
+    flex-wrap: wrap;
+  }
+
+  iframe {
+    height: 300px;
+  }
+
+  #btn-modo-oscuro {
+    margin-left: 0;
+    margin-right: 0.25rem;
+  }
+
+  .navbar .nav-link--active::after {
+    bottom: 0.1rem;
+  }
 }
