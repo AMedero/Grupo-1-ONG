@@ -282,6 +282,32 @@ article {
   border-radius: 4px;
 }
 
+.cursos-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.cursos-flex article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.curso-imagen {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.cursos-flex .btn-ver-mas {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 article p {
   color: #444444;
   margin-bottom: 10px;
@@ -416,6 +442,14 @@ html.dark-mode .iconos-redes img {
 
   .cursos img {
     max-width: 100%;
+  }
+
+  .cursos-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .curso-imagen {
+    aspect-ratio: 4 / 3;
   }
 
   .iconos-redes {
